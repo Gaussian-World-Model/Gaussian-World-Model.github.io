@@ -299,120 +299,12 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Simulation Tasks</h2>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-two-thirds">
-        <div class="content has-text-justified">
-          <p>
-            The simulated experiments are conducted in <a href="https://github.com/markusgrotz/peract_bimanual">RLBench2</a>. We transfer a well-recognized unimanual policy PerAct to bimanual policy with AnyBimanual, and find that it can complete 12 challenging bimanual tasks simultaneously.  
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-container">
-      <!-- Row 1 -->
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/laptop.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(a) pick laptop</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/plate.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(b) pick plate</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/sweep.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(c) sweep to dustpan</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/ball.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(d) lift ball</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/box.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(e) push box</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/tray.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(f) lift tray</p>
-        </div>
-      </div>
-      <!-- Row 2 -->
-      <div class="columns is-multiline is-mobile">
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/oven.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(g) take out tray</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/button.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(h) press buttons</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/easy.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(i) handover item easy</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/handover.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(j) handover item</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/rope.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(k) straighten rope</p>
-        </div>
-        <div class="column is-narrow has-text-centered">
-          <video controls autoplay loop muted playsinline style="width: 320px; height: 240px; margin: 10px;">
-            <source src="./resources/sim_demos/fridge.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <p>(l) put bottle in fridge</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
     <h2 class="title is-2" style="text-align: center;">Real-world Tasks</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-two-thirds">
         <div class="content has-text-justified">
         <p>
-          The real-world experiments are performed in a tabletop setup with objects randomized in location every episode. AnyBimanual can simultaneously conduct 9 complex
-          real-world bimanual manipulation tasks with one model.
+          We deploy a Franka Emika FR3 robotic arm and a Panda gripper for our real-robot experiments. We focus on the real-world task of picking a colored cup, and placing it onto a plate on the table. We collect a small set of $30$ demonstrations using AR teleoperation interfaces. We also setup one third-view Realsense D435i camera to provide unposed RGB-only images for observation. We compare the performance of the state-of-the-art RGB-based policy Diffusion Policy with or without our GWM representation.
         </p>
         </div>
       </div>
@@ -474,8 +366,9 @@
         <h2 class="title is-2">Acknowledgement</h2>
         <div class="content has-text-justified">
           <p>
-            The author team would like to acknowledge <a href="https://github.com/CyanChew">Yuheng Zhou</a>, Wenkai Guo, Jiarui Xu, Qianzhun Wang, Yongxuan Zhang, Zilai Wei, Haolei Bai from Nanyang Technological University for participating in the expert data collection and Xinyue Zhao from Nanyang Technological University for art design support.
-                  </div>
+            The author team would like to acknowledge <a href="https://jason-aplp.github.io/Ruijie-Lu/">Ruijie Lu</a>, <a href="https://dali-jack.github.io/Junfeng-Ni/">Junfeng Ni</a>, and <a href="https://yuliu-ly.github.io/">Yu Liu</a> from BIGAI General Vision Lab for fruitful discussions. Remember those halcyon days shared in PKU bistros in the golden afterglow.
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -485,11 +378,11 @@
 <section class="section" id="BibTeX">
   <div class="container content">
     <h2 class="titile">BibTeX</h2>
-    <pre><code>@article{lu2024anybimanual,
-  title={AnyBimanual: Transferring Unimanual Policy for General Bimanual Manipulation},
-  author={Lu, Guanxing and Yu, Tengbo and Deng, Haoyuan and Chen, Season Si and Tang, Yansong and Wang, Ziwei},
-  journal={arXiv preprint arXiv:2412.06779},
-  year={2024}
+    <pre><code>@article{lu2025gaussianworldmodel,
+  title={GWM: Towards Scalable Gaussian World Models for Robotic Manipulation},
+  author={Lu, Guanxing and Jia, Baoxiong and Li, Puhao and Chen, Yixin and Wang, Ziwei and Tang, Yansong and Huang, Siyuan},
+  journal={ICCV 2025},
+  year={2025}
 }</code></pre>
   </div>
 </section>
