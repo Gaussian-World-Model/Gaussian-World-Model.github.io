@@ -162,7 +162,7 @@
                 </span>
                 <!-- Video Link. -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=RFwLgtzrXuM"
+                  <a href="#"
                     class="external-link button is-normal is-rounded is-dark" target="_blank">
                     <span class="icon">
                         <i class="fab fa-youtube"></i>
@@ -221,7 +221,7 @@
       <div class="column is-full-width is-centered has-text-centered">
         <!-- <h2 class="title is-2" style="text-align: center;" id="method-video" >Real-World Robot Parkour Demos</h2> -->
         <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/RFwLgtzrXuM" title="AnyBimanual"            
+          <iframe src="#" title="AnyBimanual"            
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
@@ -299,7 +299,7 @@
 
 <section class="section">
   <div class="container">
-    <h2 class="title is-2" style="text-align: center;">Real-world Tasks</h2>
+    <h2 class="title is-2" style="text-align: center;">Real-world Tasks Comparison</h2>
     <div class="columns is-centered has-text-centered">
       <div class="column is-two-thirds">
         <div class="content has-text-justified">
@@ -309,49 +309,59 @@
         </div>
       </div>
     </div>
-    <!-- Row 1 -->
-    <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Typewriting</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/robot.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Fold Clothes</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/clothes.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Handover Bowl</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/handover.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+    
+    <!-- Video Selection Controls -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-half">
+        <div class="field">
+          <label class="label">Select Video Episode:</label>
+          <div class="control">
+            <div class="select is-fullwidth">
+              <select id="videoSelector">
+                <option value="1">Episode 1</option>
+                <option value="2">Episode 2</option>
+                <option value="3">Episode 3</option>
+                <option value="4">Episode 4</option>
+                <option value="5">Episode 5</option>
+                <option value="6">Episode 6</option>
+                <option value="7">Episode 7</option>
+                <option value="8">Episode 8</option>
+                <option value="9">Episode 9</option>
+                <option value="10">Episode 10</option>
+                <option value="11">Episode 11</option>
+                <option value="12">Episode 12</option>
+                <option value="13">Episode 13</option>
+                <option value="14">Episode 14</option>
+                <option value="15">Episode 15</option>
+                <option value="16">Episode 16</option>
+                <option value="17">Episode 17</option>
+                <option value="18">Episode 18</option>
+                <option value="19">Episode 19</option>
+                <option value="20">Episode 20</option>
+              </select>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <!-- Row 2 -->
+
+    <!-- Video Comparison -->
     <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Lift Cabinet</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/lift.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <div class="column is-half has-text-centered">
+        <h3 class="video-title">Diffusion Policy</h3>
+        <video id="dpVideo" controls autoplay loop muted playsinline 
+               src="./resources/real_demo/dp/1.mp4" 
+               poster="./resources/loading-icon.gif" 
+               style="width: 100%; border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+        </video>
       </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Pick&Place Async</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pick_in_one.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Pick&Place Sync</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pick_in_two.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-    </div>
-    <!-- Row 3 -->
-    <div class="columns is-centered">
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Play PingPang</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/pingpang.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Wash Dishes</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/press.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
-      </div>
-      <div class="column is-one-third has-text-centered">
-        <h3 class="video-title">Rotate Toothbrush</h3>
-        <video controls autoplay loop muted playsinline src="./resources/real_demo/brushtooth.mp4" poster="./resources/loading-icon.gif" style="border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;"></video>
+      <div class="column is-half has-text-centered">
+        <h3 class="video-title">Gaussian World Model</h3>
+        <video id="gwmVideo" controls autoplay loop muted playsinline 
+               src="./resources/real_demo/gwm/1.mp4" 
+               poster="./resources/loading-icon.gif" 
+               style="width: 100%; border: 1px solid #bbb; border-radius: 10px; margin: 1.0%;">
+        </video>
       </div>
     </div>
   </div>
@@ -400,6 +410,35 @@
     if (window.pageYOffset > 50) { // Check if the page is scrolled down by 50px
       document.getElementById('cover-image').style.display = 'none';
       document.getElementById('main-content').style.display = 'block';
+    }
+  });
+
+  // Video selector functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const videoSelector = document.getElementById('videoSelector');
+    const dpVideo = document.getElementById('dpVideo');
+    const gwmVideo = document.getElementById('gwmVideo');
+
+    if (videoSelector && dpVideo && gwmVideo) {
+      videoSelector.addEventListener('change', function() {
+        const selectedId = this.value;
+        
+        // Update video sources
+        dpVideo.src = `./resources/real_demo/dp/${selectedId}.mp4`;
+        gwmVideo.src = `./resources/real_demo/gwm/${selectedId}.mp4`;
+        
+        // Load and play the new videos
+        dpVideo.load();
+        gwmVideo.load();
+        
+        // Auto-play if videos were previously playing
+        if (!dpVideo.paused) {
+          dpVideo.play();
+        }
+        if (!gwmVideo.paused) {
+          gwmVideo.play();
+        }
+      });
     }
   });
 </script>
